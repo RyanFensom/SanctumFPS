@@ -43,6 +43,10 @@ public class Weapon : NetworkBehaviour
                 GetComponentInParent<Player>().score++;
                 Debug.Log("hit.transform.name");
             }
+            else if (hit.transform.tag == "turretPlace" && GetComponent<Player>().score >= Get)
+            {
+
+            }
             
         }
     }
