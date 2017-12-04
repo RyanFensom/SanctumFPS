@@ -23,13 +23,12 @@ public class Menu : MonoBehaviour {
         float scrH = Screen.height / 9;
         float scrW = Screen.width / 16;
 
-        if (GUI.Button(new Rect(scrW * 6, scrH * 4, scrW * 2, scrH), "Singleplayer"))
+        if (GUI.Button(new Rect(scrW * 6, scrH * 3, scrW * 5, scrH), "Singleplayer"))
         {
-            SceneManager.LoadSceneAsync("Singleplayer");
-            Instantiate(player);
+            SceneManager.LoadScene("Singleplayer");
         }
 
-        if (GUI.Button(new Rect(scrW * 9, scrH * 4, scrW * 2, scrH), "Multiplayer"))
+        if (GUI.Button(new Rect(scrW * 6, scrH * 5, scrW * 5, scrH), "Multiplayer"))
         {
             SceneManager.LoadSceneAsync("Offline");
             Instantiate(player);

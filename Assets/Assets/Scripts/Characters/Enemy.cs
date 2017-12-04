@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class Enemy : NetworkBehaviour
 {
-    public Goal goal;
+    public NetworkGoal goal;
     NavMeshAgent agent;
     [SyncVar]
     public float health = 20;
@@ -18,7 +18,7 @@ public class Enemy : NetworkBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        goal = FindObjectOfType<Goal>();
+        goal = FindObjectOfType<NetworkGoal>();
     }
 
     // Update is called once per frame
